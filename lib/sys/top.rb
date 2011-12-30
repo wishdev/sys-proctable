@@ -22,7 +22,7 @@ module Sys
       windows = /mswin|win32|windows|dos|cygwin|mingw/i
 
       # Sort by pid on Windows by default
-      if Config::CONFIG['host_os'].match(windows) && field == 'pctcpu'
+      if RbConfig::CONFIG['host_os'].match(windows) && field == 'pctcpu'
         field = 'pid'
       end
 
